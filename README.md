@@ -1,4 +1,6 @@
-# react-datetime
+# react-dt-picker
+
+**This components was forked from [react-datetime](https://www.npmjs.com/package/react-datetime) and fixed [Can't getInstance of undefined](https://github.com/YouCanBookMe/react-datetime/issues/699) issue**
 
 [![Build Status](https://api.travis-ci.org/YouCanBookMe/react-datetime.svg?branch=master)](https://travis-ci.org/YouCanBookMe/react-datetime.svg?branch=master)
 [![npm version](https://badge.fury.io/js/react-datetime.svg)](http://badge.fury.io/js/react-datetime)

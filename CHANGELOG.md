@@ -1,5 +1,8 @@
 Changelog
 =========
+## 2.16.4
+* Fix issue: can't getInstance of undefined, update dependencies
+
 ## 2.16.2
 * Turns moment timezone peer dependency in a runtime error when missing using `displayTimezone`.
 

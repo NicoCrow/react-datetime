@@ -16,6 +16,15 @@ var viewModes = Object.freeze({
 	TIME: 'time',
 });
 
+var ClickableWrapper = onClickOutside( createClass({
+	render: function() {
+		return React.createElement( 'div', { className: this.props.className }, this.props.children );
+	},
+	handleClickOutside: function( e ) {
+		this.props.onClickOut( e );
+	}
+}));
+
 var TYPES = PropTypes;
 var Datetime = createClass({
 	displayName: 'DateTime',
@@ -501,15 +510,6 @@ var Datetime = createClass({
 		));
 	}
 });
-
-var ClickableWrapper = onClickOutside( createClass({
-	render: function() {
-		return React.createElement( 'div', { className: this.props.className }, this.props.children );
-	},
-	handleClickOutside: function( e ) {
-		this.props.onClickOut( e );
-	}
-}));
 
 Datetime.defaultProps = {
 	className: '',

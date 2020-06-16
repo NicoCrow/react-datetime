@@ -19,7 +19,7 @@ gulp.task( 'sub', () => {
 		.pipe( gulp.dest( 'tmp/' ) );
 });
 
-gulp.task( 'build', ['sub'], () => {
+gulp.task( 'build', gulp.series('sub'), () => {
 	return gulp.src( ['tmp/react-datetime.js'] )
 		.pipe( sourcemaps.init( { loadMaps: true } ) )
 			.pipe( through.obj( function( file, enc, cb ) {
@@ -41,7 +41,7 @@ gulp.task( 'build', ['sub'], () => {
 	// TODO: Remove tmp folder
 });
 
-gulp.task( 'default', ['build'] );
+gulp.task( 'default', gulp.series('build') );
 
 /*
  * Utility functions
